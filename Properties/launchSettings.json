@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CloudTunnel (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CloudTunnel (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
