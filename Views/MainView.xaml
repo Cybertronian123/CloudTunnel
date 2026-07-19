@@ -1,0 +1,85 @@
+<Page
+    x:Class="CloudTunnel.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Padding="32">
+
+        <Grid Padding="32">
+
+            <StackPanel Spacing="24">
+
+                <!-- Header -->
+                <StackPanel>
+                    <TextBlock
+                        Text="☁ CloudTunnel"
+                        FontSize="30"
+                        FontWeight="SemiBold"/>
+
+                    <TextBlock
+                        Text="Expose your local application securely using Cloudflare Tunnel."
+                        Opacity="0.7"/>
+                </StackPanel>
+
+                <!-- Host -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Host"/>
+                    <TextBox
+                        PlaceholderText="127.0.0.1"
+                        Text="{Binding Host, Mode=TwoWay}"/>
+                </StackPanel>
+
+                <!-- Port -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Port"/>
+                    <TextBox
+                        PlaceholderText="8096"
+                        Text="{Binding Port, Mode=TwoWay}"/>
+                </StackPanel>
+
+                <!-- URL -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Public URL"/>
+                    <TextBox
+                        IsReadOnly="True"
+                        Text="{Binding PublicUrl}"
+                        PlaceholderText="Tunnel not started..."/>
+                </StackPanel>
+
+                <!-- Status -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Status"/>
+                    <TextBlock
+                        FontWeight="SemiBold"
+                        Text="{Binding Status}"/>
+                </StackPanel>
+
+                <!-- Buttons -->
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="12">
+
+                    <Button
+                        Width="140"
+                        Content="Start Tunnel"/>
+
+                    <Button
+                        Width="140"
+                        Content="Stop Tunnel"/>
+
+                    <Button
+                        Width="120"
+                        Content="Copy URL"/>
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Page>

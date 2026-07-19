@@ -4,6 +4,5 @@ public enum TunnelStatus
 {
     Stopped,
     Starting,
-    Running,
-    Error
+    Running
 }
